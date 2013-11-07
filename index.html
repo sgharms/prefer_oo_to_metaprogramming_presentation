@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Preferring Object Orientation To Metaprogramming</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="Talk for Rubyconf 2013 about the benefits of preferring object oriented-patterns to metaprogramming in Ruby">
+		<meta name="author" content="Steven G. Harms">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -17,6 +17,7 @@
 		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/default.css" id="theme">
 
+		<link rel="stylesheet" href="css/mp.css">
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
@@ -36,319 +37,638 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
+					<h1>Preferring Object Orientation To Metaprogramming</h1>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
-
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
+						<small><a href="http://www.stevengharms.com">Steven G. Harms</a> / <a href="http://twitter.com/sgharms">@sgharms</a></small>
 					</p>
 				</section>
 
 				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
-				</section>
-
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  For those of you who like that sort of thing.
-						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?#/themes">Default</a> -
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?theme=night#/themes">Night</a> <br>
-						<a href="?theme=moon.css#/themes">Moon</a> -
-						<a href="?theme=simple.css#/themes">Simple</a> -
-						<a href="?theme=solarized.css#/themes">Solarized</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<section data-background="#007777">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Repeated Image Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-				</section>
-
-				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-					<h2>Background Transitions</h2>
-					<p>
-						Pass reveal.js the <code>backgroundTransition: 'slide'</code> config argument to make backgrounds slide rather than fade.
-					</p>
-				</section>
-
-				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-					<h2>Background Transition Override</h2>
-					<p>
-						You can override background transitions per slide by using <code>data-background-transition="slide"</code>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
+					<h2>About Me</h2>
 					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
+{
+  "name": "Steven Harms",
+  "email": "rubyconfXIII@sgharms.oib.com",
+  "provenance": "San Francisco, CA",
+  "chirp": "@sgharms"
 }
 					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
 				</section>
 
 				<section>
-					<h2>Intergalactic Interconnections</h2>
+					<h1>Preferring Object Orientation To Metaprogramming</h1>
 					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
+						<small><a href="http://www.stevengharms.com">Steven G. Harms</a> / <a href="http://twitter.com/sgharms">@sgharms</a></small>
 					</p>
+          <aside class="notes">
+            <ol>
+              <li>Katie Hagerty: "Take your fear out of your back pocket and put it back in you"</li>
+              <li>I reached the zenith of my love in 2011: a talk which encouraged you to use metaprogramming</li>
+            </ol>
+          </aside>
 				</section>
+
+        <section>
+          <h2>I love Metaprogramming!</h2>
+          <img src="images/self_singleton_magic.png" alt="" />
+          <aside class="notes">
+            <ol>
+              <li>Brought me to ruby in the first place.  I don't remember who it was who showed me that syntax but my world cracked open.  What could this cryptic token mean? </li>
+            </ol>
+          </aside>
+        </section>
+
+        <section>
+          <h2>And then I saw....</h2>
+          <img src="images/mp_instance_methods.png" alt="" />
+        </section>
+
+        <section>
+          <h2>And <strong>THEN</strong> I saw....</h2>
+          <img src="images/method_missing.png" alt="" />
+        </section>
+
+        <section>
+           <h2>Time passed...</h2>
+           <aside class="notes">
+            <ol>
+              <li>I wrote a large library that heavily leaned on techniques such as these and delivered a talk on it in 2011</li>
+              <li>I have had 2 years to live with code that I wrote in that style</li>
+              <li>Work across larger engineering teams, work with larger code bases, do more reading etc.</li>
+              <li>Talk about the discoveries I've made on that process....<strong>guided by three questions</strong></li>
+            </ol>
+            </aside>
+        </section>
 
 				<section>
-					<section>
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
+          <h2>Three Questions</h2>
+          <h3 class="fragment">"When should I use metaprogramming?"</h3>
+          <h3 class="fragment">"When should I prefer something else?"</h3>
+          <h3 class="fragment">"If something else, what should it be?"</h3>
+          <aside class="notes">
+            <p><strong>END</strong> - else what should it be</p>
+            <p>Let's define the term: "metaprograming" for anyone new-ish to Ruby and so that we have a common frame of reference</p>
+          </aside>
 				</section>
 
-				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-					</a>
-				</section>
+        <section>
+          <section>
+            <h2>Obligatory "Define Metaprogramming" Slide</h2>
+            <p>To talk about metaprogramming you must first spend too much time defining it</p>
+            <div class="fragment">
+              <img src="images/its-the-law.jpg" alt="" />
+            </div>
+          </section>
 
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
-				</section>
+          <section>
+            <p>Writing code that:</p>
+            <ol>
+              <li class="fragment">redirects passed messages at runtime</li>
+              <li class="fragment">provides or alters the structures that do said passing at runtime</li>
+            </ol>
+            <aside class="notes">
+              <p>Let's try to put some special emphasis on key parts of this definition.</p>
+              <p><strong>END</strong>:  At runtime</p>
+            </aside>
+          </section>
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-						during a presentation.
-					</p>
-				</section>
+          <section>
+            <p><em>At Runtime</em></p>
+            <ol>
+              <li class="fragment">redirects passed messages <em>at runtime</em></li>
+              <li class="fragment">provides or alters the structures that do said passing <em>at runtime</em></li>
+            </ol>
+          </section>
+            <aside class="notes">
+              <ol>
+                <li>Let's grant that while there is no actual difference between "run time" and "parse time" in ruby, let's 
+                point out that at parse time the code is "at rest."  Parse time is where dependencies are calculated and
+                the lookup tables instantiated.  Runtime is when the code is in motion, the main method has been executed</li>
+                <li>Key is the phrase <em>at runtime</em>.  Many discussions of MP boil down to MP is "just programming",
+                the Bowkett position, but if we introduce a split between "run time" and "parse time" the essential character of
+                MP is revealed: changes in how messages are handled and redirected are made <em>after</em> the `main`
+                thread has been entered</li>
+                <li>So that's a working definition of metaprogramming.  Let's return to our first question: <strong>'When Should i use metaprogramming?'</strong></li>
+              </ol>
+            </aside>
+          </section>
+        </section>
 
-				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="http://slid.es">Try the online editor</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
-				</section>
+        <section>
+          <h2>How Will I Know (circa 2011)</h2>
+          <img width="320" height="299" src="/images/Whitney_Houston_HowWill_IKnow.jpg " alt="Whitney Houson">
+          <aside class="notes">
+          <ol>
+            <li>Poor job slide in 2011</li>
+            <li>The question I thought we should be asking:  When will I be ready to use these techniques</li>
+            <li>Real question is when <em>should</em> I use them <em>at all</em></li>
+            <li>Let's answer this question...</li>
+          </ol>
+          </aside>
+        </section>
 
-				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
-				</section>
+        <section>
+          <h3>"When should I use metaprogramming?"</h3>
+          <ol>
+            <li class="fragment">Never</li>
+            <li class="fragment">(Practically) Never</li>
+          </ol>
+        </section>
 
-			</div>
+        <section>
+          <h3>"When should I use something else?"</h3>
+          <ol>
+            <li class="fragment">Always</li>
+            <li class="fragment">(Practically) Always</li>
+          </ol>
+        </section>
 
-		</div>
+        <section>
+          <section>
+            <h2>Unclear Guidance <span class="fragment">(2013 edition)</span></h2>
+          </section>
+          <section>
+            <h2>Tim Connor</h2>
+            <blockquote style="font-family:courier; font-style:normal;">
+              <p><tt>The first rule of ruby metaprogramming is that you don't talk about Ruby metaprogramming (because you'll lead people new to it to over use it). ;)</tt></p>
+            </blockquote>
+          </section>
+          <section>
+            <h2>Tim Connor</h2>
+            <blockquote style="font-family:courier; font-style:normal;">
+              <p><tt>The second rule is "don't do it", and that might be part of why all the materials on it don't give the OP a good next step, because the next step should be "don't".  If you can possibly get away with it, then use something simpler and clearer.  Unfortunately, you cannot simple be told not to MP, you must see it yourself. ;)</tt></p>
+            </blockquote>
+            <aside class="notes">
+              <ol>
+                <li>We can do better.  I think we can explain why to say no to Metaprogramming.</li>
+              </ol>
+            </aside>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>The Ultimate "No" to Metaprogramming</h2>
+            <img src="images/cacao.gif">
+            <aside class="notes">
+              <p>So as a first step, let's take a Derrida-inspired <strong>Limited Inc.</strong> turn and first say....</p>
+            </aside>
+          </section>
+
+          <section>
+            <h2>No to the term Metaprogramming <em>per se</em></h2>
+            <ol>
+              <li class="fragment">Hard to define</li>
+              <li class="fragment">Greek envy</li>
+            </ol>
+          </section>
+          <aside class="notes">
+            <p><strong>END</strong> - after Greek envy</p>
+          </aside>
+        </section>
+
+        <section>
+          <section>
+            <h2>No to coding with Metaprogramming</h2>
+            <ol>
+              <li class="fragment">It has a bad conceptual framework</li>
+              <li class="fragment">The Ruby code <em>itself</em> doesn't want you to</li>
+              <li class="fragment">Normative social standards</li>
+            </ol>
+            <aside class="notes">
+              <p>Let's take a look at Metaprogramming's conceptual framework and try to identify some "wrong thinking" therein.</p>
+              <p>End after normative....</p>
+            </aside>
+          </section>
+          <section>
+            <h2>Definition Recalled</h2>
+            <p>Code that:</p>
+            <ol>
+              <li>redirects passed messages at runtime</li>
+              <li>provides or alters the structures that do said passing at runtime</li>
+            </ol>
+            <aside class="notes">
+              <p>Let's talk about metaprogramming's bad conceptual framework by putting some focus</p>
+              <p>on our operating defintion.</p>
+            </aside>
+          </section>
+
+          <section>
+            <h2>Definition Annotated</h2>
+            <p>Code that:</p>
+            <ol>
+              <li><strong>redirects</strong> passed messages <strong>at runtime</strong></li>
+              <li>provides or <strong>alters</strong> the structures that do said passing <strong>at runtime</strong></li>
+            </ol>
+            <aside class="notes">
+              <ol>
+                <li>Verb indicating surprise or aberration which means deviation from expectation</li>
+                <li>Temporal component: when did it happen, at runtime</li>
+              </ol>
+            </aside>
+          </section>
+
+          <section>
+            <h2>Metaprogramming is...</h2>
+            <p class="fragment">Willfully writing code that does something:</p>
+            <ol>
+              <li class="fragment"><em>contrary</em> to expectations communicated by the code's contextual conventions established at parse-time</li>
+              <li class="fragment">at runtime</li>
+            </ol>
+            <aside class="notes">
+              <p>Sounds familiar...</p>
+            </aside>
+          </section>
+
+          <section>
+            <h2>Bug</h2>
+            <img src="images/bedbug.jpg">
+          </section>
+
+          <section>
+            <h2>Metaprogramming is therefore...</h2>
+            <p class="fragment">Writing bugs that have adventitious, beneficial side-effects</p>
+            <blockquote class="fragment">
+              <p>Adventitous (<em>adj</em>):  coming from another source and not inherent or innate</p>
+            </blockquote>
+            <p class="fragment">A series of aberrations that <em>just happen</em> to produce the right output</p>
+            <aside class="notes">
+              <p><strong>3 fragments</strong></p>
+              <p>You might think that I've merely played a very clever definitional game here, loading words and doing analysis to support my point.  But I feel that it's often the case that our code is trying to communicate and that's where I think you'll
+              get a second voice which encourages us to eschew metaprogramming.</p>
+            </aside>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <img src="images/louder_than_code.png">
+          </section>
+          <section>
+            <h2>Broken TAB-completion in IRB</h2>
+            <img src="images/shortening.png">
+          </section>
+          <section>
+            <h2>Many, many tests</h2>
+            <img src="images/many_tests.png">
+          </section>
+          <section>
+            <h2>Horrible debug-ability</h2>
+            <img src="images/basic_mm.png">
+            <aside class="notes">
+              <p>But if you won't listen to me or to the code, maybe you'll listen to some guy on Twitter.</p>
+            </aside>
+          </section>
+        </section>
+
+        <section>
+          <h2>Listen to Twitter</h2>
+          <img src="images/timberman_mp.png">
+          <aside class="notes">
+            <p>Actually, he's some guy who listened to some guy.  So is that a meta-tweet</p>
+          </aside>
+        </section>
+
+        <section>
+          <h2>The End of Quote-Metaprogramming</h2>
+          <ul>
+            <li class="fragment">Term is bad</li>
+            <li class="fragment">Style is bad</li>
+          </ul>
+          <div class="fragment">
+            <img src="images/samir.jpg" alt="" />
+            <p><em>Yes, this is horrible, this idea</em></p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Part II:  How to Replace Quote-Metaprogramming</h2>
+        </section>
+
+        <section>
+          <img src="images/mp_gone.png">
+        </section>
+
+
+        <section>
+          <section>
+            <h2>Anti-Metaprogramming code</h2>
+            <ol>
+              <li class="fragment">deducible from parse-time state</li>
+              <li class="fragment">demonstrates reason and purpose <em>in itself</em></li>
+            </ol>
+            <p class="fragment" style="margin-top: 25px;">Obvious</p>
+            <aside class="notes">
+              <p>These two criteria distill into two properties for obviousness</p>
+              <p>I'd go so far to say that that's pretty much my operating definition for what "good code" is</p>
+              <p><strong>END</strong>:  OBVIOUS</p>
+            </aside>
+          </section>
+
+          <section>
+            <h2>Obvious</h2>
+            <ol>
+              <li class="fragment">Greppable*</li>
+              <li class="fragment">Graspable</li>
+            </ol>
+            <aside class="notes">
+              <p>Accordingly after each of these changes we should expect the code, if the transformation was worth its salt, to be more greppable and / or more graspable</p>
+              <p>We'll start with a basic error and then try to make choices that make the code more obvious</p>
+            </aside>
+          </section>
+        </section>
+
+        <!--- DEMO CODE -->
+
+        <section>
+          <section>
+            <h2>Anti-Pattern: Defining methods with <tt>define_method</tt></h2>
+          </section>
+          <section>
+            <img src="images/dynamic_method_naming_evil.png"/>
+            <aside class="notes">
+              <p>If you're new to Ruby and you're looking at this and seeing so many wonderful opportunities to do
+              amazing things because I told you about it.  Please don't</p>
+            </aside>
+          </section>
+          <section>
+            <h2>Obviousness</h2>
+            <ol>
+              <li class="fragment">Lowest greppability</li>
+              <li class="fragment">Mid graspability, trending down</li>
+            </ol>
+          </section>
+          <section>
+            <h2>Alternatives</h2>
+            <p class="fragment">Use `def`</p>
+          </section>
+          <section>
+            <img src="images/dynamic_method_naming_nicer.png"/>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Anti-Pattern:  Junk-drawer modules</h2>
+          </section>
+          <section>
+            <img src="images/dynamic_method_naming_nicer.png"/>
+          </section>
+          <section>
+            <img src="images/junk_drawer.png"/>
+            <aside class="notes">
+              <p>You might think that here would be a great chance to extract your methods into a module.  It would make
+              this class very skinny.  I recommend you do not do this.</p>
+            </aside>
+          </section>
+          <section>
+            <h2>Obviousness</h2>
+            <ol>
+              <li class="fragment">Highest greppability</li>
+              <li class="fragment">Middle graspability, trending down</li>
+            </ol>
+          </section>
+          <section>
+            <img src="images/sarah_mei_quote.png" alt="" />
+          </section>
+          <section>
+            <img src="images/well_named_modules.png"/>
+          </section>
+          <section>
+            <h2>Obviousness</h2>
+            <ol>
+              <li class="fragment">Highest greppability</li>
+              <li class="fragment">Middle-High graspability, trending down</li>
+            </ol>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Anti-Pattern:  Anonymous modules</h2>
+            <aside class="notes">
+              <p>As a slight variation, you might, at some point think yourself really clever and want to create anonymous modules because you'll look cool  Do not.</p>
+            </aside>
+          </section>
+          <section>
+            <img src="images/good_anony_mod.png"/>
+          </section>
+          <section>
+            <img src="images/bad_anony_mod.png"/>
+          </section>
+          <section>
+            <h2>Obviousness</h2>
+            <ol>
+              <li class="fragment">Mid-low greppability, rapidly trending down</li>
+              <li class="fragment">Mid-low graspability, rapidly trending down</li>
+            </ol>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Anti-Pattern:  Mixins to apply behavior / state to inclusor, hook method abuse</h2>
+            <aside class="notes">
+              <p>First let me introduce the term 'inclusor' : it's the class that issues the `include`</p>
+            </aside>
+          </section>
+          <section>
+            <img src="images/self_extended.png">
+          </section>
+          <section>
+            <h2>Obviousness</h2>
+            <ol>
+              <li class="fragment">Low greppability, abandon all hope</li>
+              <li class="fragment">Low graspability, abandon all hope</li>
+            </ol>
+          </section>
+            <ol>
+              <li class="fragment">Better pattern already exists!</li>
+              <li class="fragment">Use strategy pattern to to change behavior of the inclusor</li>
+            </ol>
+        </section>
+
+        <section>
+          <section>
+            <h2>Pattern:  Use Strategies to apply behavior / state to inverted class</h2>
+            <aside class="notes">
+              <ol>
+                <li>At this point I've said a lot of bad things about mixins</li>
+                <li>Nothing wrong with mixins per se, they're a great way to bundle up methods</li>
+                <li>But they imply no responsibility, no authorial intent, and that's why i like to have a class
+                bolt them into an inclusor class</li>
+              </ol>
+            </aside>
+          </section>
+          <section>
+            <img src="images/strategies_with_intermediary.png" alt="" />
+          </section>
+          <section>
+            <h2>Obviousness</h2>
+            <ol>
+              <li class="fragment">High greppability, easy refactors</li>
+              <li class="fragment">High graspability, easy refactors</li>
+              <li class="fragment">Verging on good OO!</li>
+            </ol>
+          <aside class="notes">
+            <p>Use a class with and invert the dependency</p>
+            <li>Classes imply intention, prefer them</li>
+            <li>Injectability</li>
+            <p>Dependency Inversion is one of the most powerful concepts in programming.  Instead of having an all powerful
+            object that is the subject of every sentence describing how it initializes itself; it allows itself to become
+            an object in the sentence that describes how a delegate class works.  If you don't know about this technique you might try to implement it in a bad fashion like....</p>
+          </aside>
+          </section>
+        </section>
+
+        <section>
+          <h2>On the topic of good OO...</h2>
+        </section>
+
+        <section>
+          <section>
+            <h2>Anti-Pattern: Mind of God Constructs</h2>
+          </section>
+          <section>
+            <p>Many quote-metaprogramming techniques go against OO</p>
+          </section>
+          <section>
+            <ol>
+              <li>Method Missing</li>
+              <li>Open Class</li>
+              <li>Kernel method</li>
+            </ol>
+          </section>
+          <section>
+            <img src="images/reinh_openclass_tweet.png" alt="Rein Heinrichs dislikes Open Class" />
+          </section>
+          <section>
+            <h2>Theme of Rubyconf 2013</h2>
+            <h2 class="fragment">Maturing Ruby Ecosystem</h2>
+            <ul>
+              <li class="fragment">Jason Clark: Extending Gems - Patterns and Anti-Patterns of Making Your Gem Pluggable <span class="fragment"><em>&mdash; Which mind of God wins?</em></span></li>
+              <li class="fragment">Emily Stolfo: API design for gem authors (and users)</li>
+            </ul>
+            <aside class="notes">
+              <p>Wonder if it's like Neil Gaiman, the last mind of god venerated is the most powerful?</p>
+            </aside>
+          </section>
+          <section>
+            <ol>
+              <li>Method Missing</li>
+              <li>Open Class</li>
+              <li>Kernel method</li>
+            </ol>
+            <p>&nbsp;</p>
+            <ol>
+              <li>Greppable?  Kinda, sometimes mayyyybe?</li>
+              <li>Graspable?  Not readily without comments</li>
+            </ol>
+          </section>
+          <section>
+            <h2>Prefer instead...</h2>
+            <ol>
+              <li>Strategies</li>
+              <li>Delegates</li>
+            </ol>
+          </section>
+          <aside class="notes">
+            <p>We've seen inversion and strategies, let's take a look at delegation</p>
+            <p>This alters the "Mind of God" and instead prefers a "team of experts"
+            <p>Jim Gay is talking about advanced delegator patterns in the next session time slot; I'm definitely going to go check it out to learn more</p>
+          </aside>
+          <section>
+            <img src="images/heavily_delegated.png" alt="" />
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Anti-Pattern: Laziness Lookups</h2>
+          </section>
+          <section>
+            <h2><tt>const_get</tt>, <tt>constantize</tt></h2>
+            <ol>
+              <li>Low greppability</li>
+              <li>Low graspability</li>
+            </ol>
+          </section>
+          <section>
+            <ol>
+              <li>Type it out</li>
+              <li>What's wrong with a simple <tt>MAPPING</tt> hash?</li>
+            </ol>
+            <aside class="notes">
+              <ol>
+                <li>Spend time typing to to save time debugging</li>
+                <li>Forwardable takes away the "don't want to write boilerplate" argument</li>
+              </ol>
+            </aside>
+          </section>
+        </section>
+
+        <section>
+          <h2>Principal Techniques for Happier Programming</h2>
+          <ol>
+            <li class="fragment">Make lots of small, greppable classes</li>
+            <li class="fragment">Prefer composition and delegation</li>
+            <ol>
+              <li class="fragment">Inject, inject, inject</li>
+              <li class="fragment">Love inversion</li>
+            </ol>
+            <li class="fragment">Strategies for the unnamable or that which requires comment</li>
+        </section>
+
+        <section>
+          <h2>Further Reference</h2>
+          <ol>
+            <li class="fragment">POODR:  Start here</li>
+            <li class="fragment">Refactoring Ruby Edition</li>
+            <li class="fragment">Design Patterns in Ruby</li>
+          </ol>
+        </section>
+
+        <section>
+          <section>
+            <h2>Winding Up: Metaprogramming</h2>
+            <ol>
+              <li class="fragment"><strong>DON'T</strong> write more of it</li>
+              <li class="fragment"><strong>DO</strong> understand it</li>
+              <ul>
+                <li class="fragment">Lotta legacy metaprogrammatic code out there needing refactoring</li>
+                <li class="fragment">Very helpful as a debugging technique with IRB, Pry, Byebug, Debugger</li>
+              </ul>
+            </ol>
+          </section>
+        </section>
+
+        <section>
+          <h2>Thanks</h2>
+          <ol>
+            <li>Shop It To Me Engineering: Past and Present:  Rafael, Alex, Kenneth, Jeremy, Josh, Rich</li>
+            <li>A-W Authors who made this path of transition possible: Sandi Metz, Russ Olsen, Jay Fields & Shane Harvie</li>
+            <li>Lauren:  Who always supports my dreams</li>
+            <li>YOU! And <strong>our</strong> awesome <s>Ruby Community</s>Team of Garbage Collectors</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Valediction:  All Is Well</h2>
+          <blockquote>
+            <strong>Rancho</strong>: That day I understood that this heart scares easily. You have to trick it, however big the problem is. Tell your heart, 'Pal, all is well. All is well.'<br/>
+            <strong>Raju</strong>: Does that solve the problem?<br/>
+            <strong>Rancho</strong>: No, but you gain courage to face it
+          </blockquote>
+          <p>"<a href="http://www.imdb.com/title/tt1187043/">3 Idiots</a>"</p>
+        </section>
+
+        <section>
+          <h2>END</h2>
+        </section>
+
+    </div> <!-- /slides -->
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
@@ -373,7 +693,9 @@ function linkify( selector ) {
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'socket.io/socket.io.js', async: true },
+          { src: 'plugin/notes-server/client.js', async: true }
 				]
 			});
 
